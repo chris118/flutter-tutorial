@@ -8,6 +8,11 @@ import 'lifecycle.dart';
 import 'state_managed.dart';
 import 'pointer_page.dart';
 import 'notification_page.dart';
+import 'eventbus_page.dart';
+import 'animation_page.dart';
+import 'base_page.dart';
+import 'animation2_page.dart';
+
 
 void main() => runApp(MyApp());
 
@@ -104,6 +109,14 @@ class _MyHomePageState extends State<MyHomePage> {
               height: 50,
             ),
             RaisedButton(
+                child: Text("base page"),
+                textColor: Colors.blue,
+                onPressed: () {
+                  Navigator.push(context, MaterialPageRoute(builder: (context) {
+                    return BasePage();
+                  }));
+                }),
+            RaisedButton(
                 child: Text("navigate to new Page - stateless page"),
                 textColor: Colors.blue,
                 onPressed: () {
@@ -142,6 +155,30 @@ class _MyHomePageState extends State<MyHomePage> {
                 onPressed: () {
                   Navigator.push(context, MaterialPageRoute(builder: (context) {
                     return NotificationPage();
+                  }));
+                }),
+            RaisedButton(
+                child: Text("EventbusWidgetPage"),
+                textColor: Colors.blue,
+                onPressed: () {
+                  Navigator.push(context, MaterialPageRoute(builder: (context) {
+                    return EventbusWidgetPage();
+                  }));
+                }),
+            RaisedButton(
+                child: Text("AnimationPage"),
+                textColor: Colors.blue,
+                onPressed: () {
+                  Navigator.push(context, MaterialPageRoute(builder: (context) {
+                    return AnimationPage();
+                  }));
+                }),
+            RaisedButton(
+                child: Text("AnimationPage2"),
+                textColor: Colors.blue,
+                onPressed: () {
+                  Navigator.push(context, MaterialPageRoute(builder: (context) {
+                    return Animation2Page();
                   }));
                 }),
           ],
